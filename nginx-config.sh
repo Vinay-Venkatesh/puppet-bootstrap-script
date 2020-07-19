@@ -32,7 +32,7 @@ else
 fi
 
 #Remove the repositories
-cd /tmp && rm -rf apache-configuration
+cd /tmp && rm -rf nginx-configuration
 
 #Run puppet agent
 /opt/puppetlabs/bin/puppet apply -d  --modulepath=$module_path "$manifest_path"/site.pp >> /etc/logs/puppet.log
