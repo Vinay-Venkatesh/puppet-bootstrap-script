@@ -35,4 +35,4 @@ fi
 cd /tmp && rm -rf apache-configuration
 
 #Run puppet agent
-/usr/bin/puppet apply -d  --modulepath=$module_path "$manifest_path"/site.pp >> /etc/logs/puppet.log
+/opt/puppetlabs/bin/puppet apply -d  --modulepath=$module_path "$manifest_path"/site.pp >> /etc/logs/puppet.log
