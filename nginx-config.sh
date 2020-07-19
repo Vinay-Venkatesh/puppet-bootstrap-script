@@ -22,13 +22,13 @@ fi
 cd /tmp && git clone --branch master https://github.com/xxCoDeBoX/nginx-configuration.git
 
 #Move the cloned repository to /etc/puppet/modules location.
-cd /tmp && cp -r apache-configuration/* "$module_path"
+cd /tmp && cp -r nginx-configuration/* "$module_path"
 
 if [ -d "$manifest_path" ];then
         cd $module_path && rm -rf "$instance_specific_module_name"
-        cd /tmp/apache-configuration && cp -r "$instance_specific_module_name" "$module_path"
+        cd /tmp/nginx-configuration && cp -r "$instance_specific_module_name" "$module_path"
 else
-        cd /tmp/apache-configuration && cp -r "$instance_specific_module_name" "$module_path"
+        cd /tmp/nginx-configuration && cp -r "$instance_specific_module_name" "$module_path"
 fi
 
 #Remove the repositories
